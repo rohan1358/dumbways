@@ -1,0 +1,13 @@
+#Menampilkan seluruh data dari table book
+SELECT * FROM `book_tb` WHERE 1
+
+#Tampilkan seluruh data book, category dan penulis
+SELECT *
+FROM book_tb
+INNER JOIN category_tb
+ON book_tb.category_id=category_tb.id
+INNER JOIN write_tb
+ON book_tb.write_id=write_tb.id
+
+#tampilkan seluruh data penulis
+SELECT * FROM `write_tb` WHERE 1
